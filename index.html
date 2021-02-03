@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&display=swap" rel="stylesheet">
+  <title>Document</title>
+</head>
+<body>
+
+  <header class="header">
+    <div class="container header-container">
+      <a href="" class="logo">
+        MOVIEПОИСК
+      </a>
+
+      <nav class="header-nav navbar">
+        <ul class="navbar-list">
+          <li class="navbar-item">
+            <a href="#" class="navbar-link">Главная</a>
+          </li>
+          <li class="navbar-item">
+            <a href="#" class="navbar-link">Смотреть позже</a>
+          </li>
+          <button class="filter">ФИЛЬТР</button>
+        </ul>
+      </nav>
+      <button class="menu-burger">
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+      </button>
+    </div>
+  </header>
+
+
+  <div class="modal-body">
+    <div class="container">
+      <form class="filter-form">
+        <input type="text" class="text-input" placeholder="Название фильма">
+        <input type="number" class="rating-input" placeholder="Райтинг фильма">
+        <select class="select">
+          <option value="all">ALL</option>
+        </select>
+        <button class="search" type="submit">Поиск</button>
+        <input type="range" class="year-input">
+        <p class="range-text">2000</p>
+      </form>
+    </div>
+  </div>
+
+  <div class="container">
+    <ul class="filter-result list">
+
+
+
+    </ul>
+  </div>
+  <script src="js/movies.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
