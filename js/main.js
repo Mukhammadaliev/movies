@@ -29,6 +29,9 @@ let elRatingInput = document.querySelector('.rating-input')
 let elNameInput = document.querySelector('.text-input')
 let elFilterResult = document.querySelector('.filter-result')
 
+let elModal = document.querySelector('.modal')
+let elModalBtn = document.querySelector('.modal-btn')
+
 
 
 elToggle.addEventListener('click', () => {
@@ -115,7 +118,7 @@ function createCard(array) {
 
     let cardRuntime = document.createElement('p')
     cardRuntime.classList.add('list-runtime')
-    cardRuntime.textContent = "Rating: "
+    cardRuntime.textContent = "Runtime: "
     let cardRuntimeSpan = document.createElement('span')
     cardRuntimeSpan.classList.add('runtime')
 
@@ -165,20 +168,20 @@ elForm.addEventListener('submit', (evt) => {
 
 
 
-// var searchMovies = (titleRegex = '', minRating = 0, genre = 'All') => {
-//   return movies.filter(movie => {
-//     var doesMatchCategory = genre === 'All' || movie.categories.includes(genre);
-//     return movie.title.match(titleRegex) && movie.imdbRating >= minRating && doesMatchCategory;
-//   });
-// };
-
-
-
 elFilterResult.addEventListener('click', function (evt) {
   if (evt.target.matches('.list-item')) {
     let movie = moviesArr.find(function (movieFind) {
       return movieFind.imdbId == evt.target.dataset.imdbId
     })
-    console.log(movie);
+    elModal.classList.add('modal-open')
+    document.querySelector('.modal-img').src = movie.imgBig;
+    document.querySelector('.modal-name').textContent = movie.title;
+    document.querySelector('.modal-runtime').textContent = `Runtime: ${movie.runtime}`
+    document.querySelector('.modal-rating').textContent = `Rating: ${movie.imdbRating}`
   }
+})
+
+
+elModalBtn.addEventListener('click', () => {
+  elModal.classList.remove('modal-open')
 })

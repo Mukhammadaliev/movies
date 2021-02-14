@@ -358,3 +358,43 @@ input::-webkit-inner-spin-button {
     -webkit-appearance: none;
 
 }
+
+.modal-movie {
+  background-color: #333;
+  color: #fff;
+  position: fixed;
+  width: 80%;
+  height: 80%;
+  top: 50%;
+  left: 50%;
+  border-radius: 15px;
+  transform: translate(-50%, -50%);
+}
+
+.modal {
+  display: none;
+}
+
+.modal-open {
+  display: block;
+  position: relative;
+}
+.modal-open .modal-img {
+  width: 100%;
+  display: inline-block;
+  height: 80%;
+  object-fit: cover;
+}
+
+.modal-name {
+  padding: 0px 20px;
+}
+.modal-runtime {
+  padding: 0px 20px;
+}
+.modal-rating {
+  padding: 0px 20px;
+}
+.modal-btn {
+  margin-left: 20px;
+}
